@@ -1,0 +1,23 @@
+<ng-template #prevButtonTemplate>
+  <svg viewBox="0 0 24 24">
+    <path d="m9.8 12 5 5a1 1 0 1 1-1.4 1.4l-5.7-5.7a1 1 0 0 1 0-1.4l5.7-5.7a1 1 0 0 1 1.4 1.4l-5 5z" />
+  </svg>
+</ng-template>
+
+<ng-template #nextButtonTemplate>
+  <svg viewBox="0 0 24 24">
+    <path d="m14.3 12.1-5-5a1 1 0 0 1 1.4-1.4l5.7 5.7a1 1 0 0 1 0 1.4l-5.7 5.7a1 1 0 0 1-1.4-1.4l5-5z" />
+  </svg>
+</ng-template>
+
+<div class="v-hl-btn v-hl-btn-prev" *ngIf="button && hasPrev" (click)="prev()">
+  <ng-container [ngTemplateOutlet]="prevButtonTemplateRef ? prevButtonTemplateRef : prevButtonTemplate"></ng-container>
+</div>
+
+<div class="v-hl-btn v-hl-btn-next" *ngIf="button && hasNext" (click)="next()">
+  <ng-container [ngTemplateOutlet]="nextButtonTemplateRef ? nextButtonTemplateRef : nextButtonTemplate"></ng-container>
+</div>
+
+<div #container class="v-hl-container" [ngClass]="{'v-hl-responsive': responsive, 'v-hl-scroll': scroll, 'v-hl-snap-start': snap === 'start', 'v-hl-snap-center': snap === 'center', 'v-hl-snap-end': snap === 'end'}">
+  <ng-content></ng-content>
+</div>

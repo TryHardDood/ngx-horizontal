@@ -1,0 +1,25 @@
+<!--
+  Welcome to Tailwind Play, the official Tailwind CSS playground!
+
+  Everything here works just like it does when you're running Tailwind locally
+  with a real build pipeline. You can customize your config file, use features
+  like `@apply`, or even add third-party plugins.
+
+  Feel free to play with this example if you're just learning, or trash it and
+  start from scratch if you know enough to be dangerous. Have fun!
+-->
+<div class="sm:py-12 flex flex-col justify-center min-h-screen py-6 space-y-12 bg-gray-100">
+  <div class="sm:max-w-2xl sm:mx-auto relative py-3">
+    <div ngx-horizontal responsive autoplay="1500" button="true" class="p-2 bg-white rounded-lg shadow">
+      <a href="#" class="min-w-max" ngx-horizontal-item *ngFor="let item of items">
+        <img class="lg:h-20 h-16 px-4 rounded" src="https://shop.matusz-vad.hu/assets/images/premium.png">
+      </a>
+    </div>
+  </div>
+
+  <div ngx-horizontal responsive autoplay="1500" button="true" class="w-full shadow">
+    <a href="#" class="min-w-max" ngx-horizontal-item *ngFor="let item of items">
+      <img class="lg:h-80 bg-gradient-to-r from-green-300 to-green-500 object-cover object-center w-full h-48" width="1100" src="https://source.unsplash.com/1100x350/?food">
+    </a>
+  </div>
+</div>
