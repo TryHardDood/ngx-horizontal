@@ -20,7 +20,7 @@
   right: 0;
   transform: translateX(50%);
 }
-svg {
+:host svg {
   width: 40px;
   height: 40px;
   margin: 6px;

@@ -78,11 +78,12 @@ export class NgxHorizontalComponent implements AfterContentInit, OnDestroy {
   @Output()
   prevEvent: EventEmitter<NgxHorizontalData> = new EventEmitter();
 
+  hasPrev: boolean = false;
+  hasNext: boolean = false;
+
   private left: number;
   private containerWidth: number;
   private scrollWidth: number;
-  private hasPrev: boolean = false;
-  private hasNext: boolean = false;
 
   private autoplayIntervalId: ReturnType<typeof setInterval | null>;
 
